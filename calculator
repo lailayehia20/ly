@@ -1,0 +1,61 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int i = 1;
+        do{
+                System.out.println("enter the first number");
+                double firstNumber = input.nextDouble();
+                System.out.println("enter the second number");
+                double secondNumber = input.nextDouble();
+                System.out.println("enter your operation choice");
+                System.out.println(" 1. sum  , 2. difference , 3. product ,    4. division , 5.modulus ");
+                int choice = input.nextInt();
+            switch (choice) {
+                case 1:
+                    addition(firstNumber, secondNumber);
+                    break;
+                case 2:
+                    subtraction(firstNumber, secondNumber);
+                    break;
+                case 3:
+                    product(firstNumber, secondNumber);
+                    break;
+                case 4:
+                    division(firstNumber, secondNumber);
+                    break;
+                case 5:
+                    modulus(firstNumber, secondNumber);
+                    break;
+                default:
+                    System.out.println("invalid operation");
+            }
+            System.out.println("do you want to do another operation? 1. yes 2. no");
+            int a = input.nextInt();
+            i = a;
+        }while( i == 1);
+    }
+    public static void addition(double x, double y){
+        System.out.println("the sum is " + (x + y));
+    }
+    public static void subtraction(double x, double y){
+        System.out.println("the difference is " + (x - y));
+    }
+    public static void product(double x, double y) {
+        System.out.println("the product is " + (x * y));
+    }
+    public static void division(double x, double y){
+        if (y == 0){
+            throw new ArithmeticException("cannot divide by zero");
+        }
+        else {
+            System.out.println("the result of division is " + (x/y));
+        }
+    }
+    public static void modulus(double x, double y) {
+        System.out.println("the remainder is " + (x % y));
+    }
+}
