@@ -1,0 +1,1 @@
+The aim of this code is to create a simple calculator that allows the user to perform basic arithmetic operations (addition, subtraction, multiplication, division, and modulus) on two numbers. The program continues to prompt the user for more operations until the user decides to exit.
